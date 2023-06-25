@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mbta-tracker"
+version = "0.1.0"
+description = ""
+authors = ["arjun-shanmugam <65803362+arjun-shanmugam@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "mbta_tracker"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+bokeh = "^3.2.0"
+pandas = "^2.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
