@@ -79,7 +79,7 @@ station_df = pd.concat([station_df, glx_df], axis=0)
 # Merge with station latitudes and longitudes.
 # pull data from MBTA GTFS
 feed = gtfs_kit.read_feed(Path(MBTA_GTFS), dist_units='km')
-columns_to_keep = ['stop_name', 'parent_station', 'location_type', 'stop_lat', 'stop_lon']
+columns_to_keep = ['stop_name', 'stop_code', 'parent_station', 'location_type', 'stop_lat', 'stop_lon']
 station_latitudes_and_longitudes = (feed.get_stops()[columns_to_keep]  # keep select columns from stop data
                                     .groupby('stop_name')
                                     .fillna(method='bfill')  # fill parent station for the parent stations, which are missing parent station
